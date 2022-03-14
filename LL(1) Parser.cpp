@@ -111,8 +111,8 @@ void print_table() {
     for (int i = 0; i < non_terminals.size(); i++) {
         cout << non_terminals[i];
         for (int j = 0; j < terminals.size(); j++) {
-            if (find(follow_arr[non_terminals[i]].begin(), follow_arr[non_terminals[i]].end(), to_string(terminal s[j])) != follow_arr[non_terminals[i]].end()) {
-                if (find(productions[non_terminals[i]].begin(), productions[non_terminals[i]].end(), to_string(EN D)) != productions[non_terminals[i]].end())
+            if (find(follow_arr[non_terminals[i]].begin(), follow_arr[non_terminals[i]].end(), to_string(terminals[j])) != follow_arr[non_terminals[i]].end()) {
+                if (find(productions[non_terminals[i]].begin(), productions[non_terminals[i]].end(), to_string(END)) != productions[non_terminals[i]].end())
                     table[non_terminals[i]][terminals[j]] = '#';
             }
             cout << " \t\t|" << "\t\t" << table[non_terminals[i]][terminals[j]];
